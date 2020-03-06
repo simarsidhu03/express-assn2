@@ -1,0 +1,14 @@
+<%- include('partials/header') %>
+  <figure>
+   <% 
+       for(x of images){ 
+        console.log(title,x.id);
+        if(x.id == title) {
+        %>
+        
+        <img src="../images/lrg/<%= x.fileName  %> " alt="<%= x.title %>">
+       
+    <figcaption><%= x.title %> <div><a href="<%= x.attribution.url %>"> <%= x.attribution.credit %></a> from <%= x.attribution.source %></div></figcaption>
+    <% }}  %>  
+</figure>
+<%- include('partials/footer') %>
